@@ -1,0 +1,119 @@
+@import '_variables.scss';
+@import '_morph.scss';
+@import '_text.scss';
+@import '_modal.scss';
+
+.js .loading::before {
+	content: '';
+	position: fixed;
+	color: #fff;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #5141d6;
+	z-index: 100;
+	text-align: center;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	height: 70px;
+	margin: -35px 0 0 -35px;
+	pointer-events: none;
+	z-index: 101;
+	border: 7px solid #4133b4;
+	border-top-color: #fff;
+	border-radius: 50%;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	-webkit-animation: rotateLoader 0.8s linear infinite forwards;
+	animation: rotateLoader 0.8s linear infinite forwards;
+}
+
+@-webkit-keyframes rotateLoader {
+	to {
+		-webkit-transform: rotate3d(0, 0, 1, 360deg);
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
+
+@keyframes rotateLoader {
+	to {
+		-webkit-transform: rotate3d(0, 0, 1, 360deg);
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
+
+//Layout 
+
+.hero {
+  &.full{
+    height: 100vh;
+  }
+  &.flex {
+    height: auto;
+  }
+}
+.vertical-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-child {
+  align-self: flex-start;
+}
+.small-padding {
+	padding-top: 10vh;	
+}
+.body {
+ font: 100% $font-stack;
+}
+.heading-large{
+  font-size: 13px;
+  font-weight: 600;
+  margin: 10px;
+}
+.heading {
+  font-family: $font-stack;
+  margin: 10px;
+}
+.heading-small {
+  font-size: 9px;
+  font-weight: 200;
+  margin: 10px;
+}
+/* Content */
+.content {
+	position: relative;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	min-height: 500px;
+	padding: 7em 0;
+}
+//Buttons
+
+.button-container {
+  display: flex;
+}
+.button {
+  margin: 10px;
+}
