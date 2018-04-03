@@ -111,6 +111,12 @@ a:focus {
 		cursor: pointer;
 	}
 }
+.typeform-share {
+	&:hover {
+		fill: $blue;
+		cursor: pointer;
+	}	
+}
 .down-arrow {
 	fill: none;
 	stroke: #000;

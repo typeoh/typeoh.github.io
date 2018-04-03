@@ -22,7 +22,10 @@
   font-size: ($title-size * 0.33) ;
   font-family: $font-stack;
 }
-
+.blue {
+  color: $blue;
+  text-align: center;
+}
 .title-one {
   font-weight: 900;
   font-size: $title-size;
