@@ -109,11 +109,10 @@ const triggerTextAnimation = function () {
       targets: ['.title-one .letter', '.title-one'],
       opacity: [0, 1],
       easing: "easeOutExpo",
-      duration: 2000,
+      duration: 1500,
       delay: function (el, i) {
         return 34 * (i + 1)
       },
-      offset: 1000,
     })
     .add({
       targets: ['.pre-rotate'],
@@ -121,7 +120,7 @@ const triggerTextAnimation = function () {
       easing: "easeOutExpo",
       duration: 500,
     })
-  setTimeout(() => { triggerType() }, 5000)
+  setTimeout(() => { triggerType() }, 2000)
 }
 //******************************************** TO DO add scroll animation
 
